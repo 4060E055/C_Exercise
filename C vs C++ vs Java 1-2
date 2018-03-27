@@ -1,0 +1,80 @@
+
+常數宣告
+------------
+#define 是宏定義，它不能定義常量，但宏定義可
+以實現在字面意義上和其它定義常量相同的功能，
+本質的區別就在於 #define 不為宏名分配內存，
+而const 也不為常量分配內存，怎麼回事呢，
+其實 const 並不是去定義一個常量，而是去改變
+一個變數的存儲類，把該變數所占的內存變為只讀！
+
+
+C
+---------------------------
+#include <stdio.h>
+#define LENGTH 10  //定義10的代替字為   LENGTH
+#define WIDTH  5
+int main()
+{
+   const char NEWLINE = '\n'; //宣告常數字元NEWLINE為換行符號
+   int area;  
+   area = LENGTH * WIDTH;
+   printf("value of area : %d", area);
+   printf("%c", NEWLINE);
+   return 0;
+}
+============================================================
+
+C++
+---------------------------
+#include <iostream>
+using namespace std;
+ 
+#define LENGTH 10   //定義10的代替字為   LENGTH
+#define WIDTH  5
+int main()
+{
+   const char NEWLINE = '\n';//宣告常數字元NEWLINE為換行符號
+   int area;  
+   area = LENGTH * WIDTH;
+   cout << area;
+   cout << NEWLINE;
+   return 0;
+}
+
+
+============================================================
+
+Java
+---------------------------
+
+public class Variable {
+    public String instance = "實例變數";
+    public static String variable = "靜態變數";    //靜態變數的定義方式
+    public static String CONST = "靜態常量";    //靜態常量的定義方式 
+    public static void main(String[] args) {
+        String local = "局部變數";    //類似這個就是局部變數，不可用訪問修飾符修飾，沒有默認初始值
+        System.out.println(local);    //局部變數就是在方法或語句塊中的變數
+        Global global = new Global();    //類似這個就是實例變數，也稱全局變數
+        System.out.println(global.instance);    //實例變數就必須先把類new一個出來才能使用,因為他是在類中,方法外的
+        System.out.println(variable);    //來瞅瞅靜態變數，也叫類變數，靜態變數的訪問方式1(在自己類的時候)
+        System.out.println(Global.variable);    //靜態變數的訪問方法2(不在自己類的時候)
+    }
+}
+
+class Global{
+    public String instance = "實例變數";    //實例變數在一個類的裡面,語句塊的外面
+    public static String variable = "靜態變數";
+    Global(){    //在類的內部使用自己的實例變數：要麼老老實實new一個出來,就像上面那個
+        //第二種方法就是在函數裡面使用實例變數，注意，如果方法是靜態方法參照方法1
+        System.out.println(instance);
+        System.out.println(variable);
+    }
+    public void Instance() {
+        System.out.println(instance);    //靜態變數訪問方法1(在自己類的時候),靜態常量和靜態變數訪問相同
+        System.out.println(Variable.CONST);
+    }
+}
+
+============================================================
+
