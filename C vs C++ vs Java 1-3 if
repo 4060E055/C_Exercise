@@ -1,0 +1,80 @@
+
+
+
+C
+----------------------
+#include <stdio.h>
+ 
+int main ()
+{
+   /* 局部變數定義 */
+   int a = 100;
+ 
+   /* 檢查布爾條件 */
+   if( a < 20 )
+   {
+       /* 如果條件為真，則輸出下面的語句 */
+       printf("a 小於 20\n" );
+   }
+   else
+   {
+       /* 如果條件為假，則輸出下面的語句 */
+       printf("a 大於 20\n" );
+   }
+   printf("a 的值是 %d\n", a);
+ 
+   return 0;
+}
+===============================================
+
+
+C++
+----------------------
+
+#include <iostream>
+using namespace std;
+ 
+int main ()
+{
+   // 局部變數聲明
+   int a = 100;
+ 
+   // 檢查布爾條件
+   if( a < 20 )
+   {
+       // 如果條件為真，則輸出下面的語句
+       cout << "a 小於 20" << endl;
+   }
+   else
+   {
+       // 如果條件為假，則輸出下面的語句
+       cout << "a 大於 20" << endl;
+   }
+   cout << "a 的值是 " << a << endl;
+ 
+   return 0;
+}
+===============================================
+
+Java
+----------------------
+public class Test {
+   public static void main(String args[]){
+      int x = 30;
+ 
+      if( x == 10 ){
+         System.out.print("Value of X is 10");
+      }else if( x == 20 ){
+         System.out.print("Value of X is 20");
+      }else if( x == 30 ){
+         System.out.print("Value of X is 30");
+      }else{
+         System.out.print("這是 else 語句");
+      }
+   }
+}
+==================================================
+結論:if 用法都相同
+
+
+===============================================
