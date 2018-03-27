@@ -1,0 +1,105 @@
+
+
+
+C
+-------------------
+#include <stdio.h>
+ 
+int main ()
+{
+   /* 局部變數定義 */
+   char grade = 'B';
+   switch(grade)
+   {
+   case 'A' :
+      printf("很棒！\n" );
+      break; 
+   case 'B' :
+   case 'C' :
+      printf("做得好\n" );
+      break;
+   case 'D' :
+      printf("您通過了\n" );
+      break;
+   case 'F' :
+      printf("最好再試一下\n" );
+      break;
+   default : //以上除外
+      printf("無效的成績\n" );
+   }
+   printf("您的成績是 %c\n", grade );
+ 
+   return 0;
+}
+
+
+=====================================================
+
+C++
+-------------------
+#include <iostream>
+using namespace std;
+ 
+int main ()
+{
+   // 局部變數聲明
+   char grade = 'D';
+ 
+   switch(grade)
+   {
+   case 'A' :
+      cout << "很棒！" << endl; 
+      break;
+   case 'B' :
+   case 'C' :
+      cout << "做得好" << endl;
+      break;
+   case 'D' :
+      cout << "您通過了" << endl;
+      break;
+   case 'F' :
+      cout << "最好再試一下" << endl;
+      break;
+   default :
+      cout << "無效的成績" << endl;
+   }
+   cout << "您的成績是 " << grade << endl;
+ 
+   return 0;
+}
+=====================================================
+
+Java
+-------------------
+public class Test {
+   public static void main(String args[]){
+      //char grade = args[0].charAt(0);
+      char grade = 'C';
+ 
+      switch(grade)
+      {
+         case 'A' :
+            System.out.println("優秀"); 
+            break;
+         case 'B' :
+         case 'C' :
+            System.out.println("良好");
+            break;
+         case 'D' :
+            System.out.println("及格");
+         case 'F' :
+            System.out.println("你需要再努力努力");
+            break;
+         default :
+            System.out.println("未知等級");
+      }
+      System.out.println("你的等級是 " + grade);
+   }
+}
+
+
+=====================================================
+結論:C=C++=Java 語法相同
+switch特性，判斷一個為真後依然會檢查下面的是否為真，除非+  break(跳出) 指令，否則會檢查到最下面，
+ex:若沒加break 且全部判斷為真時，則會全部都執行(包含除外的)
+
