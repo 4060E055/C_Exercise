@@ -1,0 +1,47 @@
+C
+--------------------------
+#include <stdio.h>
+ 
+int main ()
+{
+   /* for 循環執行 */
+   for( int a = 10; a < 20; a = a + 1 )
+   {
+      printf("a 的值： %d\n", a);
+   }
+ 
+   return 0;
+}
+==========================================
+
+C++
+--------------------------
+#include <iostream>
+using namespace std;
+ 
+int main ()
+{
+   // for 循環執行
+   for( int a = 10; a < 20; a = a + 1 )
+   {
+       cout << "a 的值：" << a << endl;
+   }
+   return 0;
+}
+
+==========================================
+
+
+Java
+--------------------------
+public class Test {
+   public static void main(String args[]) {
+
+      for(int x = 10; x < 20; x = x+1) {
+         System.out.print("value of x : " + x );
+         System.out.print("\n");
+      }
+   }
+}
+==========================================
+C與C++的for迴圈用法一樣，
