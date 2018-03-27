@@ -1,0 +1,40 @@
+
+C
+--------------
+#include <stdio.h> 
+int main()
+{
+    printf("Hello, World! \n");
+    return 0;
+}
+======================================================
+
+C++
+--------------
+#include <iostream>
+using namespace std; // 告訴編譯器使用 std 命名空間，在此命名為空白
+int main()
+{
+    cout << "Hello, world!" << endl;
+    return 0;
+}
+======================================================
+
+Java
+--------------
+public class HelloWorld { //HelloWorld一定要跟class檔名一樣
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+======================================================
+
+輸出
+C: printf() (\n為換行)
+C++: cout   (endl為結束並換行)
+Java: System.out.print     (+ln可換行)
+
+載入標頭擋標準輸入輸出:
+C: #include <stdio.h> 
+C++: #include <iostream>
+
