@@ -59,7 +59,7 @@ public class Exercise_2 {
 			for (int k=1;k<5;k++){
 				if (i==k || j==k)
 				continue;
-	System.out.printf("%d%d%d\n",i,j,k);
+	System.out.printf("%d%d%d\n",i,j,k); //(★1?)
 	}}}
 }}
 ---------------------------------------
@@ -67,6 +67,8 @@ public class Exercise_2 {
 <Python>
 
 
----------------------------------------
+________________________________________
+(★1?)輸出語法
+java中可以用C的輸出語法，語法：System.out.printf();
+把print加個f即可
 
-輸出print ;
