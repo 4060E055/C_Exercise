@@ -1,0 +1,74 @@
+遞迴程式(RECURSIVE)
+費式數列
+---------------------------------------
+
+<C>
+
+#include <stdio.h>
+#include<stdlib.h>
+long F(long n){
+ if(n<=2) return 1;	
+ else 
+ return F(n-1)+F(n-2);
+}
+
+int main(){
+ long n,i;
+ printf("請輸入要多少個費式數列：");
+ scanf("%ld",&n);
+for (i=1;i<=n;i++){
+	 printf("%ld ", F(i));
+}
+ system("pause");
+}
+---------------------------------------
+
+<C++>
+
+#include <iostream>
+using namespace std;
+ 
+long F(long n){
+ if(n<=2) return 1;	
+ else 
+ return F(n-1)+F(n-2);
+}
+
+int main(){
+ long n;
+ cout<<"請輸入要多少個費式數列：";
+ cin>>n;
+ for (int i=1;i<=n;i++){
+	 cout<<F(i)<<" ";
+}
+ system("pause");
+}
+---------------------------------------
+
+<Java>
+
+package exercise5_1;
+import java.util.Scanner;
+public class exercise {
+public static int F(int n){
+	 if(n<=2) return 1;	
+	 else 
+	 return F(n-1)+F(n-2);
+}
+
+public static void main(String[] args){
+	Scanner input=new Scanner(System.in);
+	int n,i;
+	 System.out.print("請輸入要多少個費式數列：");
+	  n=input.nextInt();
+	for (i=1;i<=n;i++){
+		 System.out.print(F(i)+" ");
+	}}}
+---------------------------------------
+
+<Python>
+
+
+________________________________________
+
+遞回的費式數列寫法為:先計算第1到n項數的費式數列分別為多少，再把他組合成一串n項的費式數列
