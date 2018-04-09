@@ -11,14 +11,19 @@ long F(long n){
  else 
  return F(n-1)+F(n-2);
 }
+void Fn(int n ){
+ if (n<=1)
+  printf("1");
+ else{
+  printf("%d ", F(n));
+  Fn(n-1);}
 
+}
 int main(){
  long n,i;
  printf("請輸入要多少個費式數列：");
  scanf("%ld",&n);
-for (i=1;i<=n;i++){
-	 printf("%ld ", F(i));
-}
+ Fn(n);
  system("pause");
 }
 ---------------------------------------
@@ -33,21 +38,24 @@ long F(long n){
  else 
  return F(n-1)+F(n-2);
 }
-
+void Fn(int n ){
+ if (n<=1)
+  cout<<"1"<<endl;
+ else{
+ cout<<F(n)<<",";
+  Fn(n-1);}
+}
 int main(){
  long n;
  cout<<"請輸入要多少個費式數列：";
  cin>>n;
- for (int i=1;i<=n;i++){
-	 cout<<F(i)<<" ";
-}
+ Fn(n);
  system("pause");
 }
 ---------------------------------------
 
 <Java>
 
-package exercise5_1;
 import java.util.Scanner;
 public class exercise {
 public static int F(int n){
@@ -55,15 +63,19 @@ public static int F(int n){
 	 else 
 	 return F(n-1)+F(n-2);
 }
-
+public static void Fn(int n ){
+	 if (n<=1)
+	  System.out.println(1);
+	 else{
+		 System.out.print(F(n)+",");
+	  Fn(n-1);}
+	}
 public static void main(String[] args){
 	Scanner input=new Scanner(System.in);
-	int n,i;
+	int i;
 	 System.out.print("請輸入要多少個費式數列：");
-	  n=input.nextInt();
-	for (i=1;i<=n;i++){
-		 System.out.print(F(i)+" ");
-	}}}
+	 Fn(input.nextInt());
+}}
 ---------------------------------------
 
 <Python>
