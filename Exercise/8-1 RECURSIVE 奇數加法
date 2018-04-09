@@ -4,20 +4,77 @@ ex:1+3+.....+
 
 <C>
 
-
+#include <stdio.h>
+#include<stdlib.h>
+int fuc(int n){
+	if (n==1) {
+    printf("1=");
+    return 1;
+    } 	
+	else{ 
+  printf("%d+",n);
+	return n+fuc(n-2);} 
+}
+int main (){
+ printf("請輸入要幾項數的奇數加總(從1開始)：");
+ int n ;
+ scanf("%d",&n); 
+ printf("%d\n",fuc(2*(n-1)+1));
+system("pause");
+return 0;
+}
 ---------------------------------------
 
 <C++>
 
-
+#include <iostream>
+using namespace std;
+int fuc(int n){
+	if (n==1) {
+    cout<<"1=";
+    return 1;
+    } 	
+	else{ 
+  cout<<n<<"+";
+	return n+fuc(n-2);} 
+}
+int main ()
+{
+cout<< "請輸入要幾項數的奇數加總(從1開始)：";
+int n ;
+cin >>n; 
+cout<< fuc(2*(n-1)+1)<<endl; 
+ system("pause"); 
+   return 0;
+}
 ---------------------------------------
 
 <Java>
 
+import java.util.Scanner;
 
+public class exercise {
+public static int fuc(int n){
+	if (n==1) {
+	    System.out.print("1=");
+	    return 1;
+	    } 	
+		else{ 
+			System.out.print(n +"+");
+		return n+fuc(n-2);} 
+}
+public static void main(String[] args) {
+System.out.print("請輸入要幾項數的奇數加總(從1開始)：");
+		Scanner input =new Scanner(System.in);
+		int n=input.nextInt();	
+		System.out.println(fuc(2*(n-1)+1) );
+		input.close();
+	}
+}
 ---------------------------------------
 
 <Python>
 
 
 ________________________________________
+寫法：先計算最後一項數為多少，往回加奇數。
