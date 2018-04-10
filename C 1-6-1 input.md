@@ -22,6 +22,7 @@ int main( )
 讀取一串字串
 p.s:字元陣列多於沒用到的空間依然會佔存取，使用指標陣列不會
 ```
+```
 #include <stdio.h>//在stdio標頭檔裡
 int main( )
 {
