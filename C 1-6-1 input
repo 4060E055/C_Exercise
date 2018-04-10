@@ -1,0 +1,35 @@
+
+scanf() 和 printf() 函数
+讀取一個單一的字元，不受存取變數型態的影響
+------------------------------------------------------------------
+#include <stdio.h>
+ 
+int main( )
+{
+   int c;
+ 
+   printf( "Enter a value :");
+   c = getchar( );//讀取一個字元
+ 
+   printf( "\nYou entered: ");
+   putchar( c );//輸出一個字元
+   printf( "\n");
+   return 0;
+}
+------------------------------------------------------------------
+
+gets() & puts() 函数
+
+#include <stdio.h>
+ ------------------------------------------------------------------
+int main( )
+{
+   char str[100];
+ 
+   printf( "Enter a value :");
+   gets( str );
+ 
+   printf( "\nYou entered: ");
+   puts( str );
+   return 0;
+}
