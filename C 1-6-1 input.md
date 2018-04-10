@@ -17,11 +17,11 @@ int main( )
    return 0;
 }
 ```
-```
+
 ###<二>gets(字串) & puts(字串) 函数
 讀取一串字串
 p.s:字元陣列多於沒用到的空間依然會佔存取，使用指標陣列不會
-```
+
 ```
 #include <stdio.h>//在stdio標頭檔裡
 int main( )
@@ -36,10 +36,10 @@ int main( )
    return 0;
 }
 ```
-```
+
 ###<三>scanf(型態,位址) 和 printf(型態,變數) 函数
 型態有：%d,%ld,%f,%lf,%c,
-```
+
 ```
 #include <stdio.h>
 int main( ) {
