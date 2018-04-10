@@ -38,8 +38,8 @@ int main( )
 ```
 
 ###<三>scanf(型態,位址) 和 printf(型態,變數) 函数
-型態有：%d,%ld,%f,%lf,%c,
-
+型態有：%d(整數),%ld(長整數),%f(浮點數),%lf(背精度浮點數),%c(字元),%s(字串)
+p.s:變數前面+ "&" 可變成變數的位址
 ```
 #include <stdio.h>
 int main( ) {
@@ -48,7 +48,7 @@ int main( ) {
    int i;
  
    printf( "Enter a value :");
-   scanf("%s %d", str, &i);
+   scanf("%s %d", str, &i);//讀取字串跟整數，&i為i的位址
  
    printf( "\nYou entered: %s %d ", str, i);
    printf("\n");
