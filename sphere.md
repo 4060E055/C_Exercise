@@ -128,6 +128,7 @@ int main()
 }
 ```
 
-(pic/分離.png)
+
+![gg](pic/分離.png)
 
 
