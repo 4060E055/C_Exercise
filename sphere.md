@@ -128,6 +128,6 @@ int main()
 }
 ```
 
-![result](PIC/分離.PNG)
+![result](pic/分離.PNG)
 
 
