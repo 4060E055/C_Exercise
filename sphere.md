@@ -75,55 +75,59 @@ int main()
   return 0;
 }
 ```
+# 球體體積
 
-
-```
-#include "Circle.h"
-
-// Construct a default circle object
-Circle::Circle()
-{
-  radius = 1;
-}
-
-// Construct a circle object
-Circle::Circle(double newRadius)
-{
-  radius = newRadius;
-}
-
-// Return the area of this circle
-double Circle::getArea()
-{
-  return radius * radius * 3.14159;
-}
-```
-
-主執行程式:
 ```
 #include <iostream>
-#include "Circle.h"
 using namespace std;
+
+class Sphere
+{
+public:
+  // The radius of this circle
+  double radius;
+
+  // Construct a default circle object
+  Sphere()
+  {
+    radius = 1;
+  }
+
+  // Construct a circle object
+  Sphere(double newRadius)
+  {
+    radius = newRadius;
+  }
+
+  // Return the area of this circle
+  double volume()
+  {
+    return 4.0/3.0*radius*radius*radius * 3.14159*4.0;
+  }
+};  // Must place a semicolon here
 
 int main()
 {
-  Circle circle1;
-  Circle circle2(5.0);
+  Sphere sphere1(1.0);
+  Sphere sphere2(25);
+  Sphere sphere3(125);
 
   cout << "The area of the circle of radius "
-    << circle1.radius << " is " << circle1.getArea() << endl;
+    << sphere1.radius << " is " << sphere1.volume() << endl;
   cout << "The area of the circle of radius "
-    << circle2.radius << " is " << circle2.getArea() << endl;
+    << sphere2.radius << " is " << sphere2.volume() << endl;
+  cout << "The area of the circle of radius "
+    << sphere3.radius << " is " << sphere3.volume() << endl;
 
   // Modify circle radius
-  circle2.radius = 100;
+  sphere2.radius = 100;
   cout << "The area of the circle of radius "
-    << circle2.radius << " is " << circle2.getArea() << endl;
+    << sphere2.radius << " is " << sphere2.volume() << endl;
 
   return 0;
 }
 ```
 
-# 封裝
 
-[範例說明:圓形物件與面積](https://github.com/MyDearGreatTeacher/CPP/blob/master/20180424/TestCircle.cpp)
+
+
