@@ -22,28 +22,61 @@
 
 [作業:球物件與體積及表面積]Sphere, getVolume 體積, getArea表面積
 
-# 實作與定義分離(教科書9.6)
+# 球體表面積
 
-定義:Circle.h
+
 ```
-class Circle
+#include <iostream>
+using namespace std;
+
+class Sphere
 {
 public:
   // The radius of this circle
   double radius;
 
   // Construct a default circle object
-  Circle();
+  Sphere()
+  {
+    radius = 1;
+  }
 
   // Construct a circle object
-  Circle(double);
+  Sphere(double newRadius)
+  {
+    radius = newRadius;
+  }
 
   // Return the area of this circle
-  double getArea();
-};
+  double getArea()
+  {
+    return radius * radius * 3.14159*4;
+  }
+};  // Must place a semicolon here
+
+int main()
+{
+  Sphere sphere1(1.0);
+  Sphere sphere2(25);
+  Sphere sphere3(125);
+
+  cout << "The area of the circle of radius "
+    << sphere1.radius << " is " << sphere1.getArea() << endl;
+  cout << "The area of the circle of radius "
+    << sphere2.radius << " is " << sphere2.getArea() << endl;
+  cout << "The area of the circle of radius "
+    << sphere3.radius << " is " << sphere3.getArea() << endl;
+
+  // Modify circle radius
+  sphere2.radius = 100;
+  cout << "The area of the circle of radius "
+    << sphere2.radius << " is " << sphere2.getArea() << endl;
+
+  return 0;
+}
 ```
 
-實作:Circle.cpp
+
 ```
 #include "Circle.h"
 
