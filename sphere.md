@@ -112,11 +112,11 @@ int main()
   Sphere sphere2(25);
   Sphere sphere3(125);
 
-  cout << "The area of the circle of radius "
+  cout << "The Volume of the circle of radius "
     << sphere1.radius << " is " << sphere1.volume() << endl;
-  cout << "The area of the circle of radius "
+  cout << "The Volume of the circle of radius "
     << sphere2.radius << " is " << sphere2.volume() << endl;
-  cout << "The area of the circle of radius "
+  cout << "The Volume of the circle of radius "
     << sphere3.radius << " is " << sphere3.volume() << endl;
 
   // Modify circle radius
