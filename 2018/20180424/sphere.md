@@ -129,6 +129,6 @@ int main()
 ```
 
 
-![gg](pic/分離.png)
+![gg](分離.png)
 
 
