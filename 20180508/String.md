@@ -32,10 +32,6 @@ s4.append(14, 'F');
 cout << s4 << endl; 
 ```
 
-```
-[自我學習]
-http://www.cplusplus.com/reference/string/string/append/
-```
 
 ```
 #include <iostream>
@@ -67,7 +63,7 @@ cout << "Enter a city: ";
 cin >> city; // Read to array city
 cout << "You entered " << city << endl;
 ```
-
+[作業2]從螢幕輸入姓名學號要顯示姓名學號
 ![執行畫面](0508.png)
 
 
@@ -78,7 +74,7 @@ getline(cin, city, '\n'); // Same as getline(cin, city)
 cout << "You entered " << city << endl;
 ```
 
-[作業2]從螢幕輸入姓名學號要顯示姓名學號
+
 
 ```
 
