@@ -21,4 +21,4 @@ s4.assign(14, 'F');
 cout << s4 << endl; }
 ```
 
-![result](/作業2.png)
+![result](pic/作業2.png)
