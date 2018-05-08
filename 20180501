@@ -46,7 +46,47 @@ numbers_squared[i]=numbers[i]*numbers[i];
 ```
 把一個陣列元素全部都平方存到另一個陣列
 把一個陣列元素全部都反轉存到另一個陣列
-改自教科書範例
+```
+#include<iostream>
+using namespace std;
+
+int main()
+{
+int a=0,b=0;
+cout<<"請輸入要多少位的陣列：";
+cin>> a; 
+	double numbers[a-1];
+	double numbers_squared[a-1];
+	double numbers_in_contrast[a-1];
+	
+for (int i=0;i<a;i++){
+	cout << "Enter a new number: ";
+    cin >> numbers[i];
+	 numbers_squared[i]=numbers[i]*numbers[i];
+}
+for (int i=a-1;i>=0;i--){
+numbers_in_contrast[b]=numbers[i];
+b++;
+
+}
+
+cout<<"原陣列：";
+for(int i=0;i<a;i++){
+cout<< numbers[i]<<" ";
+}
+
+cout<<"\n平方陣列：";
+for(int i=0;i<a;i++){
+cout<< numbers_squared[i]<<" ";
+}
+
+cout<<"\n反轉陣列：";
+for(int i=0;i<a;i++){
+cout<< numbers_in_contrast[i]<<" ";
+} } 
+```
+![result](pic/作業3.png)
+
 ```
 
 ### exercise2:程式閱讀題
