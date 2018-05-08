@@ -58,10 +58,19 @@ int main ()
 ```
 ### 從螢幕讀取字串
 ```
-string city;
-cout << "Enter a city: ";
-cin >> city; // Read to array city
-cout << "You entered " << city << endl;
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	string number,name; 
+	cout<<"請輸入學號：";
+	cin>>number; 
+	cout<<"請輸入姓名：";
+	cin>>name; 
+	cout<<"你的學號 姓名為："<<number<<" "<<name<<endl; 
+ } 
+ 
 ```
 [作業2]從螢幕輸入姓名學號要顯示姓名學號
 ![執行畫面](0508.png)
